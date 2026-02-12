@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>浮光掠影 · 导航页</title>
-  <!-- Font Awesome 图标库（必加，否则所有图标消失） -->
+  <!-- Font Awesome 6 双 CDN（图标库，永不丢失） -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- 备用 CDN，确保图标永不丢失 -->
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <style>
     * {
@@ -44,12 +43,11 @@
       height: 96px;
       border-radius: 50%;
       margin: 0 auto 1rem;
-      /* 去掉背景色，完全显示图片 */
       background: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;  /* 保证圆形裁切 */
+      overflow: hidden;
       box-shadow: 0 10px 20px rgba(102,126,234,0.3);
     }
     .avatar img {
@@ -118,6 +116,13 @@
       color: #6f6f8f;
       margin-top: 2px;
     }
+    .button-icon-img {
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      border-radius: 6px;
+      object-fit: contain;
+    }
     .footer {
       margin-top: 2.5rem;
       text-align: center;
@@ -133,7 +138,7 @@
 <body>
 <div class="container">
   <div class="profile">
-    <!-- 头像：直接用你的 GitHub 头像图片 -->
+    <!-- 头像：你的 GitHub 头像 -->
     <div class="avatar">
       <img src="https://avatars.githubusercontent.com/u/123556444?s=400&u=b231167421dcc2398f7d38850c67bae2036b8ed1&v=4" alt="GitHub avatar">
     </div>
@@ -142,40 +147,58 @@
   </div>
 
   <div class="links">
-    <!-- 导航页 -->
+    <!-- 1. 导航页 / 主站 -->
     <a href="https://surface233.top/" class="link-button" target="_blank" rel="noopener">
       <i class="fas fa-house"></i>
       <span class="link-title">导航页</span>
       <span class="description">surface233.top主站</span>
     </a>
-    <!-- 羊毛企鹅群 -->
+
+    <!-- 2. 羊毛企鹅群 -->
     <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=iMrkmvMhdvTyQ%2Be7XifMbdWKv02xMfL6dk2j6KU5xf%2BqIC7j9MOVohfSOkjfKyPT&busi_data=eyJncm91cENvZGUiOiI0MjYxMTI0NDgiLCJ0b2tlbiI6IkZ3WXFzazZtaHhtYVU3a2ZoWktvb0tkN3Axa2ZaWFNoLzZrOTc5QzNKakVjQmxYbjA5UlRGRG5ZNENjakZBdmQiLCJ1aW4iOiIxOTY3MzYyNzU5In0%3D&data=SnZj2ctZkc6BaKL0BOxgcARA5ezw8AE5N4xwySEB0ZZnWBEns2xZ0QSZPxJ82D9i-ynxV4uIsC8MorvY8_q4SQ&svctype=4&tempid=h5_group_info" class="link-button" target="_blank" rel="noopener">
       <i class="fab fa-qq"></i>
       <span class="link-title">羊毛企鹅群</span>
       <span class="description">不错过更多精彩</span>
     </a>
-    <!-- 福利通知元宝派 -->
+
+    <!-- 3. 福利通知元宝派 -->
     <a href="https://yb.tencent.com/gp/i/bS4wtI3ZjQGF" class="link-button" target="_blank" rel="noopener">
       <i class="fas fa-gift"></i>
       <span class="link-title">福利通知元宝派</span>
       <span class="description">腾讯元宝福利</span>
     </a>
-    <!-- 赚钱任务 -->
+
+    <!-- 4. 任务领取 -->
     <a href="https://lcnsq87vmhdu.feishu.cn/wiki/KxCfwE2lwirO4zkwvDWc4sY8nOe" class="link-button" target="_blank" rel="noopener">
       <i class="fas fa-clipboard-list"></i>
       <span class="link-title">🧧任务领取</span>
       <span class="description">正规合法任务</span>
     </a>
-    <!-- 任务结算请看（你原本有，这里我加上，链接你可能没贴完，请自行补充） -->
+
+    <!-- 5. 任务结算请看 -->
     <a href="https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=adarec40-90d9-4ea0-86fa-901cf85655d9" class="link-button" target="_blank" rel="noopener">
       <i class="fas fa-coins"></i>
       <span class="link-title">任务结算请看</span>
       <span class="description">点击加入结算群</span>
     </a>
+
+    <!-- 6. 爱发电赞助（带新春图片） -->
+    <a href="https://afdian.com/a/surface233" class="link-button" target="_blank" rel="noopener">
+      <img class="button-icon-img" src="https://pic1.afdiancdn.com/static/img/spring-festival.png" alt="afdian">
+      <span class="link-title">爱发电赞助</span>
+      <span class="description">支持我 · 不胜感激</span>
+    </a>
+
+    <!-- 7. B站个人空间（带官方logo） -->
+    <a href="https://space.bilibili.com/3493268890471245?spm_id_from=333.1007.0.0" class="link-button" target="_blank" rel="noopener">
+      <img class="button-icon-img" src="https://s1.hdslb.com/bfs/static/jinkela/long/mstation/logo-bilibili-pink.png" alt="bilibili">
+      <span class="link-title">浮光掠影awsl</span>
+      <span class="description">B站个人空间 · 关注不迷路</span>
+    </a>
   </div>
 
   <div class="footer">
-    ⚡ 版权所有 · 关注我<br>
+    ⚡ 版权所有 · 个人<br>
     <span style="opacity:0.6;">—— 浮光掠影 ——</span>
   </div>
 </div>
